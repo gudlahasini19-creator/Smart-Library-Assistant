@@ -19,8 +19,8 @@ Our system implements a complete algorithm-driven discovery engine:
 ---
 
 ## 📑 Project Presentation & Documentation
-- 📄 **[View DAA Project Report (PDF)](./PPT%20and%20DOCUMENTATION/Report.pdf)**
-- 📊 **[Download Presentation Slides (PPTX)](./PPT%20and%20DOCUMENTATION/library%20management.pptx)**
+- 📄 **[View DAA Project Report (PDF)](./Report.pdf)**
+- 📊 **[Download Presentation Slides (PPTX)](./library%20management.pptx)**
 
 ---
 
@@ -60,10 +60,8 @@ RECOMMENDATIONS ("Recommended for You")
 ```
 DAA HACK/
 │
-├── PPT and DOCUMENTATION/      # Project Report & Presentation Slides
-│   ├── Report.pdf              # Full DAA Project Report
-│   └── library management.pptx # Hackathon Presentation Slides
-│
+├── Report.pdf                  # Full DAA Project Report (PDF)
+├── library management.pptx     # Hackathon Presentation Slides (PPTX)
 ├── app.py                      # Flask REST API server & web routes
 ├── database.py                 # SQLite database schema, initialization & connection
 ├── seed_data.py                # Database seeder (105 curated books & 1,728 graph edges)
