@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Library Assistant | Book Discovery</title>
+  <link rel="stylesheet" href="/static/style.css?v=35">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-icon">📖</span>
+        <span class="logo-text">Smart Library Assistant</span>
+      </div>
+      <div class="nav-tagline">Intelligent Book Discovery</div>
+    </div>
+  </header>
+
+  <!-- Hero & Search Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <h1 class="hero-title">Find Your Next Favorite Book</h1>
+      <p class="hero-subtitle">Search any title or author to discover personalized reading recommendations.</p>
+
+      <!-- Search Bar -->
+      <div class="search-box-wrapper">
+        <div class="search-input-container">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search by book title or author..." 
+            autocomplete="off"
+            onkeydown="if(event.key==='Enter') triggerSearch()"
+          />
+          <button class="btn-search" onclick="triggerSearch()">Search</button>
+        </div>
+        <div id="autocompleteDropdown" class="autocomplete-dropdown"></div>
+      </div>
+
+      <!-- Quick Suggestion Pills -->
+      <div class="quick-tags">
+        <span>Popular:</span>
+        <button class="tag-btn active" onclick="quickSelect(5, 'Harry Potter', this)">⚡ Harry Potter</button>
+        <button class="tag-btn" onclick="quickSelect(32, 'Atomic Habits', this)">🎯 Atomic Habits</button>
+        <button class="tag-btn" onclick="quickSelect(43, 'The Psychology of Money', this)">💰 Psychology of Money</button>
+        <button class="tag-btn" onclick="quickSelect(77, 'The Daily Stoic', this)">🏛️ The Daily Stoic</button>
+        <button class="tag-btn" onclick="quickSelect(9, 'The Hunger Games', this)">🏹 Hunger Games</button>
+        <button class="tag-btn" onclick="quickSelect(1, 'The Hobbit', this)">🗡️ The Hobbit</button>
+        <button class="tag-btn" onclick="quickSelect(12, '1984', this)">👁️ 1984</button>
+        <button class="tag-btn" onclick="quickSelect(25, 'The Da Vinci Code', this)">🔍 Da Vinci Code</button>
+        <button class="tag-btn" onclick="quickSelect(14, 'Pride and Prejudice', this)">🌹 Pride & Prejudice</button>
+      </div>
+
+      <!-- Search Matches List (Appears when searching multi-match queries) -->
+      <div id="searchMatchesContainer" class="search-matches-wrapper" style="display: none;">
+        <div class="matches-header">
+          <span id="matchesCountText">Found Books</span>
+          <button class="btn-close-matches" onclick="closeMatches()">✕</button>
+        </div>
+        <div id="searchMatchesList" class="matches-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="content-container">
+
+    <!-- Active Book Focus Card -->
+    <div class="current-book-card" id="currentBookCard">
+      <div class="book-cover-placeholder">📚</div>
+      <div class="book-info">
+        <div class="book-badge">Selected Book</div>
+        <h2 class="book-title" id="bookTitle">Loading title...</h2>
+        <div class="book-meta">
+          <span class="meta-author">✍️ <strong>Author:</strong> <span id="bookAuthor">Loading...</span></span>
+          <span class="meta-separator">•</span>
+          <span class="meta-category">🏷️ <strong>Genre:</strong> <span id="bookCategory">Loading...</span></span>
+          <span class="meta-separator">•</span>
+          <span class="meta-year">📅 <strong>Published:</strong> <span id="bookYear">Loading...</span></span>
+        </div>
+        <p class="book-desc" id="bookDesc">
+          Loading description...
+        </p>
+      </div>
+    </div>
+
+    <!-- Recommendations Section -->
+    <section class="recommendations-section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">✨ Recommended for You</h2>
+          <p class="section-subtitle">Books connected through shared authors, complementary genres, and reader trends</p>
+        </div>
+        <span class="sub-badge" id="recsCount">Personalized recommendations</span>
+      </div>
+
+      <!-- Spacious, Clean Recommendations Grid -->
+      <div id="recommendationsList" class="recs-grid">
+        <!-- Populated dynamically with book cards -->
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/static/script.js?v=35"></script>
+</body>
+</html>
