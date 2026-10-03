@@ -18,6 +18,12 @@ Our system implements a complete algorithm-driven discovery engine:
 
 ---
 
+## 📑 Project Presentation & Documentation
+- 📄 **[View DAA Project Report (PDF)](./PPT%20and%20DOCUMENTATION/Report.pdf)**
+- 📊 **[Download Presentation Slides (PPTX)](./PPT%20and%20DOCUMENTATION/library%20management.pptx)**
+
+---
+
 ## 2. Core Architecture & Pipeline
 
 ```
@@ -53,6 +59,10 @@ RECOMMENDATIONS ("Recommended for You")
 
 ```
 DAA HACK/
+│
+├── PPT and DOCUMENTATION/      # Project Report & Presentation Slides
+│   ├── Report.pdf              # Full DAA Project Report
+│   └── library management.pptx # Hackathon Presentation Slides
 │
 ├── app.py                      # Flask REST API server & web routes
 ├── database.py                 # SQLite database schema, initialization & connection
