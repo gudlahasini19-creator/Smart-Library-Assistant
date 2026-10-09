@@ -19,7 +19,6 @@ Our system implements a complete algorithm-driven discovery engine:
 ---
 
 ## 📑 Project Presentation & Documentation
-- 📄 **[Official Hackathon Documentation (APSH 2026)](./APSH_2026_PROJECT_DOCUMENTATION.md)**
 - 📄 **[View DAA Project Report (PDF)](./Report.pdf)**
 - 📊 **[Download Presentation Slides (PPTX)](./library%20management.pptx)**
 
@@ -61,7 +60,6 @@ RECOMMENDATIONS ("Recommended for You")
 ```
 DAA HACK/
 │
-├── APSH_2026_PROJECT_DOCUMENTATION.md  # Official 3-Page Hackathon Documentation
 ├── Report.pdf                  # Full DAA Project Report (PDF)
 ├── library management.pptx     # Hackathon Presentation Slides (PPTX)
 ├── app.py                      # Flask REST API server & web routes
